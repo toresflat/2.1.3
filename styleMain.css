@@ -1,0 +1,492 @@
+@font-face {
+        font-family: "TTLakes";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/Users/travix/Desktop/EDUkate/KATA-Drops/Практические_задания/1.1.3/Font/TTLakes/TTLakesCondensed-ExtraLight.woff");
+        
+        font-family: "TTLakes-bold";
+        font-style: bold;
+        font-weight: normal;
+        src: url("/Users/travix/Desktop/EDUkate/KATA-Drops/Практические_задания/1.1.3/Font/TTLakes/TTLakes-ExtraBold.woff");
+    }
+
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    font-family: TTLakes;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+main {
+    background-color: #F8F8F8;
+    height: 100vh;
+}
+
+/*button-style*/
+
+ .white-button {
+    background-color: white;
+    border: none;
+}
+
+.grey-button {
+   background-color: #F8F8F8;
+    border: none;
+}
+
+
+
+/*header-block*/
+
+.header-block {
+    width: 100vw;
+    height: 88px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #D9FFF5;
+}
+
+.header-block__space {
+    display: block;
+    width: 2px;
+    height: 32px;;
+    background-color: #EAEAEA;
+    border-radius: 2px;
+}
+
+.header-block__logo {
+    margin-left: 16px;
+    margin-right: auto;
+}
+
+.header-block__space_Rmargin-20 {
+    margin-right: 20px;
+}
+
+.header-block__space_Lmargin-20 {
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .header-block__space_none {display: none;}
+}
+
+@media screen and (min-width: 1120px) {
+    .header-block-none {display: none;}
+}
+
+/*ASIDE*/
+
+.aside-menu_active {
+    display: block;
+}
+
+.aside-menu_passive {
+    display: none;
+}
+
+.screenClick-close {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 320px;
+    top: 0;
+    opacity: 0;
+}
+
+.aside-menu {
+    font-family: TTLakes;
+    width: 320px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-shadow: 0 0 20px 0px grey;
+    position: fixed;
+    top: 0;
+    left: -5px;
+    z-index: 2;
+}
+
+/*BUTTONS STYLE*/
+
+.button {
+    width: 40px;
+    height: 40px; 
+    border: none;
+    background-color: white;
+    border-radius: 50%;    
+}
+
+.button:hover {
+    opacity: 0.7;  
+}
+
+.button_close-icon {
+    background: url("/Users/travix/Desktop/EDUkate/KATA-Drops/Практические_задания/1.1.3/images/close.svg") no-repeat;
+}
+
+.button_search-icon {
+    background: url("/Users/travix/Desktop/EDUkate/KATA-Drops/Практические_задания/1.1.3/images/search.svg") no-repeat;
+}
+
+.button_call-icon {
+    background: url("/Users/travix/Desktop/EDUkate/KATA-Drops/Практические_задания/1.1.3/images/call.svg") no-repeat;
+}
+
+.button_chat-icon {
+    background: url("/Users/travix/Desktop/EDUkate/KATA-Drops/Практические_задания/1.1.3/images/chat.svg") no-repeat;
+}
+
+.button_profile-icon {
+    background: url("/Users/travix/Desktop/EDUkate/KATA-Drops/Практические_задания/1.1.3/images/profile.svg") no-repeat;
+}  
+
+.list {
+    list-style: none;
+}
+
+/*TOP*/
+
+.top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 10px;
+    margin-bottom: 15%;
+}
+
+.top__logo {
+    margin-right: auto;
+    margin-left: 23px;
+}
+
+/*LIST*/
+
+.list {
+    margin-left: 0;
+    padding: 0;
+    margin-bottom: 0;
+} 
+
+.list__element {
+    height: 32px;
+    margin-bottom: 3%;
+    margin-left: 20px;
+}
+
+.list__element:hover {
+     opacity: 0.6;
+     transform: translateX(3px);
+     transition-duration: 0.2s;
+     
+}
+
+.highlight {
+    height: 32px;
+    width: 8px;
+    border-right: 5px solid #41F6D7;
+    border-radius: 30%;
+    position: relative;
+    top: -7px;
+    left: -19px;
+    font-size: 0;
+    padding: -10px;
+    margin-right: -5px;
+    margin-bottom: -16px;
+    display: none;
+    
+    
+}
+
+.list__element:hover .highlight {
+    display: inline-block;
+    transform: translateX(-3px);
+    transition-duration: 0.2s;
+
+}
+
+/*CONTACTS*/
+
+.contacts {
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.contacts_mrgR-10 {
+    margin-right: 10px;
+}
+
+.contacts__mail {
+    font-weight: 700;
+}
+
+.contacts__number {
+    font-family: "TTLakes-bold";
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.contacts__lang-change {
+    border: none;
+    background-color: white;  
+    margin-top: 1%; 
+    opacity: 0.7;  
+}
+
+.contacts__lang-change:hover { 
+    opacity: 0.4;  
+}
+
+.contacts__lang-change_selected {
+    opacity: 0.4;
+}
+
+
+
+/*menu-block*/
+
+.menu-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-block__title {
+    margin-left: 5%;
+}
+
+.menu-scroll a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.menu-scroll a:first-child {
+    border: 2px solid #B8FFEC;
+    background-color: white; 
+    border-radius: 6px;
+    width: 246px;
+    text-align: center;
+}
+
+.menu-block__order-button_Lmargin-A {
+    margin-left: auto;
+}
+
+.menu-block__search-button_Rmargin-5 {
+    margin-right: 5%;
+}
+
+.button_text-and-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1119px) {
+    .menu-block__order-button, 
+    .menu-block__search-button {display: none;}
+}
+
+/*menu-scroll*/
+
+.menu-scroll {
+    display: flex;
+    margin-left: 5%;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.menu-scroll a {
+    flex-shrink: 0;
+    margin-right: 3%;
+}
+
+@media screen and (min-width: 1120px) {
+    .menu-scroll_wrap {flex-wrap: wrap;}
+}
+
+/*Content-block*/
+
+.content-block {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}  
+
+.content-block__elem1 {
+    margin-left: 5%;
+    margin-right: 5%;   
+}
+
+.content-photo {
+    Width: 90%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+button[name='read-button'] {
+    border: 0;
+    background: url("/Users/travix/Desktop/EDUkate/KATA-Drops/Практические_задания/2.1.3/images/expand.svg") no-repeat;
+    background-position: -5%;
+}
+
+.read-next {
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.text-tablet {
+    display: none;
+}
+
+.text-desktop {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .content-block {flex-direction: column;}
+    .content-photo {width: 100%; border-radius: 0;}
+}
+
+@media screen and (min-width: 768px) {
+    .content-block__elem1 {width: 50%;}
+    .content-block__elem2 {width: 50%;}
+}
+
+@media screen and (min-width: 768px) {
+    .text-tablet {display: inline;}
+}
+
+@media screen and (min-width: 1119px) {
+    .text-desktop {display: inline;}
+}
+
+
+/* Full list (ремонт различных брендов) */
+
+.container {
+    background-color: #F8F8F8;
+    padding-bottom: 100px;
+}
+
+.container__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    height: 56px; 
+    text-transform: uppercase;
+    font-size: 16px;
+    color: grey;
+    background-image: 
+        linear-gradient(
+        to right,
+        #F8F8F8 30%,
+         #FFFFFF 80%
+    );
+}
+
+.brand-block {
+    /*max-width: 1100px;*/
+    margin-left: 5%;
+    height: 170px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 30px;
+
+}
+
+.full-list {
+    height: auto;
+}
+
+.brand-block__element {
+    min-width: 220px;
+    width: 21%;
+    max-width: 240px;
+    height: 72px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(226, 222, 222);
+    border-radius: 5px;
+}
+
+.brand-block__element-image {
+    max-width: 128px;
+    height: auto; 
+    margin-left: 10px; 
+}
+
+.brand-block__element-link {
+    width: 40px;
+    height: 40px;
+    background-image: url('/Users/travix/Desktop/EDUkate/KATA-Drops/практические_задания/2.1.3/Images/link-go.svg');
+}
+
+.more-button {
+    margin-top: 10px;
+    width: 134px;
+    height: 24px;
+    background: url('/Users/travix/Desktop/EDUkate/KATA-Drops/практические_задания/2.1.3/Images/expand.svg') no-repeat;
+    border: none;
+    margin-left: 3%;
+}
+
+  .swiper {
+    width: 300px;
+    height: 100px;
+    margin-left: 5%;
+}
+
+.swiper-wrapper {
+    margin-left: 40px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .brand-block {
+        display: none;
+        column-gap: 0px;
+    }
+    .container__button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .enable-element {
+        display: none;
+    }
+}

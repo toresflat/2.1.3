@@ -1,0 +1,123 @@
+@font-face {
+        font-family: "TTLakes";
+        font-style: normal;
+        font-weight: normal;
+        src: url("/Users/travix/Desktop/EDUkate/KATA-Drops/практические_задания/2.1.3/Font/TTLakes/TTLakesCondensed-ExtraLight.woff");
+
+    }
+
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100vw;
+    font-family: TTLakes;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+}
+
+.container {
+    margin-left: 3%;
+}
+
+.container__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3%;
+    height: 56px; 
+    text-transform: uppercase;
+    font-size: 16px;
+    color: grey;
+    background-image: 
+        linear-gradient(
+        to right,
+        #F8F8F8 30%,
+         #FFFFFF 80%
+    );
+}
+
+.brand-block {
+    /*max-width: 1100px;*/
+    height: 170px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 30px;
+
+}
+
+.full-list {
+    height: auto;
+}
+
+.brand-block__element {
+    min-width: 220px;
+    width: 21%;
+    max-width: 240px;
+    height: 72px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(226, 222, 222);
+    border-radius: 5px;
+}
+
+.brand-block__element-image {
+    max-width: 128px;
+    height: auto; 
+    margin-left: 10px; 
+}
+
+.brand-block__element-link {
+    width: 40px;
+    height: 40px;
+    background-image: url('/Users/travix/Desktop/EDUkate/KATA-Drops/практические_задания/2.1.3/Images/link-go.svg');
+}
+
+.more-button {
+    margin-top: 10px;
+    width: 134px;
+    height: 24px;
+    background: url('/Users/travix/Desktop/EDUkate/KATA-Drops/практические_задания/2.1.3/Images/expand.svg') no-repeat;
+    border: none;
+}
+
+
+ 
+ 
+  .swiper {
+  width: 300px;
+  height: 100px;
+}
+
+.swiper-wrapper {
+    margin-left: 40px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .brand-block {
+        display: none;
+        column-gap: 0px;
+    }
+    .container__button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .enable-element {
+        display: none;
+    }
+}
