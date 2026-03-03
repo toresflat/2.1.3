@@ -1,6 +1,6 @@
 /* Full list (ремонт различных брендов) */
 let button = document.querySelector('.more-button');
-let buttonUrl = "url('/Users/travix/Desktop/EDUkate/KATA-Drops/практические_задания/2.1.3/Images/expand.svg')";
+let buttonUrl = "url('Images/expand.svg')";
 let brandBlock = document.querySelector('.brand-block');
 let buttonText = document.querySelector('.button-text');
 let buttonTextContent = buttonText.textContent = 'Показать все';
@@ -10,7 +10,7 @@ button.onclick = function () {
     
   if(brandBlock.classList.contains('full-list') === true) {
     buttonText.textContent = 'Скрыть';
-    button.style.backgroundImage = "url('/Users/travix/Desktop/EDUkate/KATA-Drops/практические_задания/2.1.3/Images/expand-reverse.svg')";
+    button.style.backgroundImage = "url('Images/expand-reverse.svg')";
     }  else {
         buttonText.textContent = buttonTextContent;
         button.style.backgroundImage = buttonUrl;
