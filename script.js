@@ -22,7 +22,17 @@ button.onclick = function () {
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  
+  
+  effect: 'coverflow',
+   coverflowEffect: {
+    rotate: 20,
+    scale: 1,
+    stretch: 60,
+    slideShadows: false,
+  },
+
+  
 
   // If we need pagination
   pagination: {
