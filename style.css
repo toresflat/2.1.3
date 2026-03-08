@@ -1,35 +1,35 @@
 @font-face {
-        font-family: "TTLakes";
-        src: url("Font/TTLakes/TTLakes-Regular.woff") format("woff");
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-    }
+    font-family: "TTLakes";
+    src: url("Font/TTLakes/TTLakes-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
-    @font-face {
-        font-family: "TTLakes";
-        src: url("Font/TTLakes/TTLakes-Bold.woff") format("woff");
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-    }
+@font-face {
+    font-family: "TTLakes";
+    src: url("Font/TTLakes/TTLakes-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
-     @font-face {
-        font-family: "TTLakes";
-        src: url("Font/TTLakes/TTLakesCondensed-Light.woff") format("woff");
-        font-weight: 200;
-        font-style: normal;
-        font-display: swap;
-    }
+@font-face {
+    font-family: "TTLakes";
+    src: url("Font/TTLakes/TTLakesCondensed-Light.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
 
-    
+
 
 html {
     box-sizing: border-box;
 }
 
-*, 
-*::before, 
+*,
+*::before,
 *::after {
     box-sizing: inherit;
 }
@@ -54,13 +54,13 @@ main {
 
 /*button-style*/
 
- .white-button {
+.white-button {
     background-color: white;
     border: none;
 }
 
 .grey-button {
-   background-color: #F8F8F8;
+    background-color: #F8F8F8;
     border: none;
 }
 
@@ -80,7 +80,8 @@ main {
 .header-block__space {
     display: block;
     width: 2px;
-    height: 32px;;
+    height: 32px;
+    ;
     background-color: #EAEAEA;
     border-radius: 2px;
 }
@@ -100,11 +101,15 @@ main {
 
 
 @media screen and (max-width: 767px) {
-    .header-block__space_none {display: none;}
+    .header-block__space_none {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1120px) {
-    .header-block-none {display: none;}
+    .header-block-none {
+        display: none;
+    }
 }
 
 /*ASIDE*/
@@ -146,14 +151,14 @@ main {
 
 .button {
     width: 40px;
-    height: 40px; 
+    height: 40px;
     border: none;
     background-color: white;
     border-radius: 50%;
 }
 
 .button:hover {
-    opacity: 0.7;  
+    opacity: 0.7;
 }
 
 .button_close-icon {
@@ -174,7 +179,7 @@ main {
 
 .button_profile-icon {
     background: url("Images/profile.svg") no-repeat;
-}  
+}
 
 .list {
     list-style: none;
@@ -201,7 +206,7 @@ main {
     margin-left: 0;
     padding: 0;
     margin-bottom: 0;
-} 
+}
 
 .list__element {
     height: 32px;
@@ -210,10 +215,10 @@ main {
 }
 
 .list__element:hover {
-     opacity: 0.6;
-     transform: translateX(3px);
-     transition-duration: 0.2s;
-     
+    opacity: 0.6;
+    transform: translateX(3px);
+    transition-duration: 0.2s;
+
 }
 
 .highlight {
@@ -229,8 +234,8 @@ main {
     margin-right: -5px;
     margin-bottom: -16px;
     display: none;
-    
-    
+
+
 }
 
 .list__element:hover .highlight {
@@ -264,13 +269,13 @@ main {
 
 .contacts__lang-change {
     border: none;
-    background-color: white;  
-    margin-top: 1%; 
-    opacity: 0.7;  
+    background-color: white;
+    margin-top: 1%;
+    opacity: 0.7;
 }
 
-.contacts__lang-change:hover { 
-    opacity: 0.4;  
+.contacts__lang-change:hover {
+    opacity: 0.4;
 }
 
 .contacts__lang-change_selected {
@@ -304,7 +309,7 @@ main {
 
 .menu-scroll a:first-child {
     border: 2px solid #B8FFEC;
-    background-color: white; 
+    background-color: white;
     border-radius: 6px;
     width: 246px;
     text-align: center;
@@ -319,15 +324,18 @@ main {
 }
 
 .button_text-and-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 @media screen and (max-width: 1119px) {
-    .menu-block__order-button, 
-    .menu-block__search-button {display: none;}
+
+    .menu-block__order-button,
+    .menu-block__search-button {
+        display: none;
+    }
 }
 
 /*menu-scroll*/
@@ -345,7 +353,9 @@ main {
 }
 
 @media screen and (min-width: 1120px) {
-    .menu-scroll_wrap {flex-wrap: wrap;}
+    .menu-scroll_wrap {
+        flex-wrap: wrap;
+    }
 }
 
 /*Content-block*/
@@ -357,11 +367,11 @@ main {
     gap: 10px;
     margin-top: 10px;
     padding-bottom: 20px;
-}  
+}
 
 .content-block__elem1 {
     margin-left: 5%;
-    margin-right: 5%;   
+    margin-right: 5%;
 }
 
 .content-photo {
@@ -399,7 +409,7 @@ main {
 }
 
 .text-full {
-    display: none; 
+    display: none;
 }
 
 .text-full_active {
@@ -407,21 +417,36 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-    .content-block {flex-direction: column;}
-    .content-photo {width: 100%; border-radius: 0;}
+    .content-block {
+        flex-direction: column;
+    }
+
+    .content-photo {
+        width: 100%;
+        border-radius: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    .content-block__elem1 {width: 50%;}
-    .content-block__elem2 {width: 50%;}
+    .content-block__elem1 {
+        width: 50%;
+    }
+
+    .content-block__elem2 {
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    .text-tablet {display: inline;}
+    .text-tablet {
+        display: inline;
+    }
 }
 
 @media screen and (min-width: 1119px) {
-    .text-desktop {display: inline;}
+    .text-desktop {
+        display: inline;
+    }
 }
 
 
@@ -437,16 +462,14 @@ main {
     padding: 0;
     margin-bottom: 3%;
     margin-left: 5%;
-    height: 56px; 
+    height: 56px;
     font-size: 16px;
     font-weight: 200;
     text-transform: uppercase;
-    background-image: 
-        linear-gradient(
-        to right,
-        #F8F8F8 30%,
-         #FFFFFF 80%
-    );
+    background-image:
+        linear-gradient(to right,
+            #F8F8F8 30%,
+            #FFFFFF 80%);
 }
 
 .brand-block {
@@ -480,7 +503,7 @@ main {
 
 .brand-block__element-image {
     /*max-width: 128px;*/
-    height: auto; 
+    height: auto;
     margin-left: 5%;
 }
 
@@ -503,13 +526,13 @@ main {
     background: url('Images/expand-reverse.svg') no-repeat;
 }
 
-  .swiper {
-   width: 100vw; /* или любая фиксированная */
-   height: 100px;
+.swiper {
+    width: 100vw;
+    /* или любая фиксированная */
+    height: 100px;
 }
 
-.swiper-slide {
-}
+.swiper-slide {}
 
 
 
@@ -517,6 +540,7 @@ main {
     .brand-block {
         display: none;
     }
+
     .container__button {
         display: none;
     }

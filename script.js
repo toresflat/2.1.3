@@ -1,51 +1,53 @@
-          /* Full list (ремонт различных брендов) */
+/* Full list (ремонт различных брендов) */
 
 let container = document.querySelector('.container');
 let buttonFullListArea = container.querySelector('.more-button');
 let brandBlock = document.querySelector('.brand-block');
 let buttonText = document.querySelector('.button-text');
-let buttonTextContent = buttonText.textContent = 'Показать все';
+let buttonTextContent = 'Показать все';
 
 
-buttonFullListArea.onclick = function () {
-    brandBlock.classList.toggle('full-list');
-    buttonFullListArea.classList.toggle('more-button_open');
-    
-  if(brandBlock.classList.contains('full-list') === true) {
+buttonFullListArea.addEventListener('click', function () {
+  brandBlock.classList.toggle('full-list');
+  buttonFullListArea.classList.toggle('more-button_open');
+
+  if (brandBlock.classList.contains('full-list') === true) {
     buttonText.textContent = 'Скрыть';
-    }  else {
-        buttonFullListArea.textContent = buttonTextContent;
-    };
-};
+  } else {
+    buttonText.textContent = buttonTextContent;
+  };
+
+  return(buttonFullListArea)
+});
 
 
 let contentBlock = document.querySelector('.content-block');
 let buttonFullTextRead = contentBlock.querySelector('.read-more-button');
 let textArea = document.querySelector('.text-full');
 let buttonReadNext = document.querySelector('.read-next');
-let buttonReadTextContent = 'Показать все';
+let buttonReadTextContent = 'Читать далее';
 
-buttonFullTextRead.onclick = function () {
+buttonFullTextRead.addEventListener('click', function () {
   textArea.classList.toggle('text-full_active');
   buttonFullTextRead.classList.toggle('more-button_open');
 
-  if(textArea.classList.contains('text-full_active') === true) {
+  if (textArea.classList.contains('text-full_active') === true) {
     buttonReadNext.textContent = 'Скрыть';
-    }  else {
-        buttonFullTextRead.textContent = buttonReadTextContent;
-    };
-}
+  } else {
+    buttonReadNext.textContent = buttonReadTextContent;
+  };
+})
 
 
 
-          /* Swiper */
+/* Swiper */
 const swiper = new Swiper('.swiper', {
   // Optional parameters
 
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination', 
+    el: '.swiper-pagination',
   },
 
   mousewheel: true,
@@ -59,7 +61,7 @@ const swiper = new Swiper('.swiper', {
 
 
 
-          /* openClose Aside-menu */
+/* openClose Aside-menu */
 
 let menu = document.querySelector('.aside-menu');
 let body = document.querySelector('.body')
@@ -68,12 +70,12 @@ let closeButton = document.querySelector('.top__close-button');
 let screenCloseButton = document.querySelector('.screenClick-close');
 
 let openClose = function (asidebutton) {
-  asidebutton.onclick = function() {
+  asidebutton.onclick = function () {
     menu.classList.toggle('aside-menu_passive');
     body.classList.toggle('overflow-hidden');
-  }; 
+  };
 }
 
-openClose (menuButton);
-openClose (closeButton);
-openClose (screenCloseButton);
+openClose(menuButton);
+openClose(closeButton);
+openClose(screenCloseButton);
