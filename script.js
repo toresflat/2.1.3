@@ -1,38 +1,47 @@
-/* Full list (ремонт различных брендов) */
-let button = document.querySelector('.more-button');
-let buttonUrl = "url('Images/expand.svg')";
+          /* Full list (ремонт различных брендов) */
+
+let container = document.querySelector('.container');
+let buttonFullListArea = container.querySelector('.more-button');
 let brandBlock = document.querySelector('.brand-block');
 let buttonText = document.querySelector('.button-text');
 let buttonTextContent = buttonText.textContent = 'Показать все';
 
-button.onclick = function () {
+
+buttonFullListArea.onclick = function () {
     brandBlock.classList.toggle('full-list');
+    buttonFullListArea.classList.toggle('more-button_open');
     
   if(brandBlock.classList.contains('full-list') === true) {
     buttonText.textContent = 'Скрыть';
-    button.style.backgroundImage = "url('Images/expand-reverse.svg')";
     }  else {
-        buttonText.textContent = buttonTextContent;
-        button.style.backgroundImage = buttonUrl;
+        buttonFullListArea.textContent = buttonTextContent;
     };
 };
 
-/* Swiper */
 
+let contentBlock = document.querySelector('.content-block');
+let buttonFullTextRead = contentBlock.querySelector('.read-more-button');
+let textArea = document.querySelector('.text-full');
+let buttonReadNext = document.querySelector('.read-next');
+let buttonReadTextContent = 'Показать все';
+
+buttonFullTextRead.onclick = function () {
+  textArea.classList.toggle('text-full_active');
+  buttonFullTextRead.classList.toggle('more-button_open');
+
+  if(textArea.classList.contains('text-full_active') === true) {
+    buttonReadNext.textContent = 'Скрыть';
+    }  else {
+        buttonFullTextRead.textContent = buttonReadTextContent;
+    };
+}
+
+
+
+          /* Swiper */
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'horizontal',
-  
-  
-  effect: 'coverflow',
-   coverflowEffect: {
-    rotate: 20,
-    scale: 1,
-    stretch: 60,
-    slideShadows: false,
-  },
 
-  
 
   // If we need pagination
   pagination: {
@@ -42,33 +51,29 @@ const swiper = new Swiper('.swiper', {
   mousewheel: true,
   keyboard: true,
 
+
+  centeredSlides: true,
+  slidesPerView: 1.5,
+  spaceBetween: 20,
 });
 
-/* Close Aside */
 
- let menu = document.querySelector('.aside-menu');
-            let body = document.querySelector('.body')
-            let menuButton = document.querySelector('.burger-button');
-            let closeButton = document.querySelector('.top__close-button');
-            let screenCloseButton = document.querySelector('.screenClick-close');
 
-            menuButton.onclick = function() {
-                menu.classList.toggle('aside-menu_passive');
-                menu.classList.toggle('aside-menu_active');
-                body.classList.toggle('overflow-visible');
-                body.classList.toggle('overflow-hidden');
-            }; 
+          /* openClose Aside-menu */
 
-            closeButton.onclick = function() {
-                menu.classList.toggle('aside-menu_passive');
-                menu.classList.toggle('aside-menu_active');
-                body.classList.toggle('overflow-visible');
-                body.classList.toggle('overflow-hidden');
-            }; 
+let menu = document.querySelector('.aside-menu');
+let body = document.querySelector('.body')
+let menuButton = document.querySelector('.burger-button');
+let closeButton = document.querySelector('.top__close-button');
+let screenCloseButton = document.querySelector('.screenClick-close');
 
-            screenCloseButton.onclick = function() {
-                menu.classList.toggle('aside-menu_passive');
-                menu.classList.toggle('aside-menu_active');
-                body.classList.toggle('overflow-visible');
-                body.classList.toggle('overflow-hidden');
-            }; 
+let openClose = function (asidebutton) {
+  asidebutton.onclick = function() {
+    menu.classList.toggle('aside-menu_passive');
+    body.classList.toggle('overflow-hidden');
+  }; 
+}
+
+openClose (menuButton);
+openClose (closeButton);
+openClose (screenCloseButton);

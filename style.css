@@ -1,14 +1,28 @@
 @font-face {
         font-family: "TTLakes";
+        src: url("Font/TTLakes/TTLakes-Regular.woff") format("woff");
+        font-weight: 400;
         font-style: normal;
-        font-weight: normal;
-        src: url("Font/TTLakes/TTLakesCondensed-ExtraLight.woff");
-        
-        font-family: "TTLakes-bold";
-        font-style: bold;
-        font-weight: normal;
-        src: url("Font/TTLakes/TTLakes-ExtraBold.woff");
+        font-display: swap;
     }
+
+    @font-face {
+        font-family: "TTLakes";
+        src: url("Font/TTLakes/TTLakes-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+
+     @font-face {
+        font-family: "TTLakes";
+        src: url("Font/TTLakes/TTLakesCondensed-Light.woff") format("woff");
+        font-weight: 200;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    
 
 html {
     box-sizing: border-box;
@@ -109,7 +123,9 @@ main {
     position: absolute;
     left: 320px;
     top: 0;
-    opacity: 0;
+    border: none;
+    opacity: 0.8;
+
 }
 
 .aside-menu {
@@ -133,7 +149,7 @@ main {
     height: 40px; 
     border: none;
     background-color: white;
-    border-radius: 50%;    
+    border-radius: 50%;
 }
 
 .button:hover {
@@ -275,6 +291,10 @@ main {
     margin-left: 5%;
 }
 
+.menu-block__title h1 {
+    font-weight: 700;
+}
+
 .menu-scroll a {
     text-decoration: none;
     color: inherit;
@@ -351,14 +371,22 @@ main {
     border-radius: 10px;
 }
 
-button[name='read-button'] {
+/*button[name='read-button'] {
     border: 0;
     background: url("Images/expand.svg") no-repeat;
     background-position: -5%;
+}*/
+
+.read-more-button {
+    margin-top: 10px;
+    width: 134px;
+    height: 24px;
+    background: url('Images/expand.svg') no-repeat;
+    border: none;
+
 }
 
 .read-next {
-    font-size: 16px;
     margin-left: 15px;
 }
 
@@ -368,6 +396,14 @@ button[name='read-button'] {
 
 .text-desktop {
     display: none;
+}
+
+.text-full {
+    display: none; 
+}
+
+.text-full_active {
+    display: inline;
 }
 
 @media screen and (max-width: 767px) {
@@ -402,9 +438,9 @@ button[name='read-button'] {
     margin-bottom: 3%;
     margin-left: 5%;
     height: 56px; 
-    text-transform: uppercase;
     font-size: 16px;
-    color: grey;
+    font-weight: 200;
+    text-transform: uppercase;
     background-image: 
         linear-gradient(
         to right,
@@ -430,9 +466,9 @@ button[name='read-button'] {
 }
 
 .brand-block__element {
-    min-width: 220px;
-    width: 21%;
-    max-width: 240px;
+    /*min-width: 220px;*/
+    /*width: 21%;*/
+    /*max-width: 240px;*/
     height: 72px;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -443,9 +479,9 @@ button[name='read-button'] {
 }
 
 .brand-block__element-image {
-    max-width: 128px;
+    /*max-width: 128px;*/
     height: auto; 
-    margin-left: 10px; 
+    margin-left: 5%;
 }
 
 .brand-block__element-link {
@@ -463,14 +499,16 @@ button[name='read-button'] {
     margin-left: 5%;
 }
 
-  .swiper {
-    width: 300px;
-    height: 100px;
-    margin-left: 5%;
+.more-button_open {
+    background: url('Images/expand-reverse.svg') no-repeat;
 }
 
-.swiper-wrapper {
-    margin-left: 40px;
+  .swiper {
+   width: 100vw; /* или любая фиксированная */
+   height: 100px;
+}
+
+.swiper-slide {
 }
 
 
@@ -478,7 +516,6 @@ button[name='read-button'] {
 @media screen and (max-width: 767px) {
     .brand-block {
         display: none;
-        column-gap: 0px;
     }
     .container__button {
         display: none;
@@ -488,5 +525,11 @@ button[name='read-button'] {
 @media screen and (min-width: 768px) {
     .enable-element {
         display: none;
+    }
+
+    .brand-block__element {
+        min-width: 220px;
+        width: 21%;
+        max-width: 240px;
     }
 }
